@@ -1,0 +1,260 @@
+/*BASICS START*/
+:root {
+  --c1: #000;
+  --c2: #fff;
+  --c3: #fff;
+  --c4: #695aa6;
+  --bgc: #474e5d;
+
+  /*Outline, box-shadow, and border*/
+  --bsh-left: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+  --bsh-right: -3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+
+  --bsh-left-hover: 3px 3px 24px 12px rgba(0, 0, 0, 0.1);
+  --bsh-right-hover: -3px 3px 24px 12px rgba(0, 0, 0, 0.1);
+
+  --bdr: var(--c1) solid 3px;
+  /*FONTS*/
+  /*Standard Fonts*/
+  --lucida: "Lucida Sans", sans-serif;
+  /*Google Fonts*/
+  --font-caveat: "Caveat", cursive;
+}
+  
+/* * {
+  box-sizing: border-box;
+
+  /*Text
+  font-family: var(--font-caveat);
+} */
+/* body {
+  /*Basics
+  height: auto;
+  width: auto;
+  margin: 0;
+  /*Background
+  background: var(--bgc);
+  /*Text
+  color: var(--c1);
+  font-size: 24px;
+  /*Other
+  overflow-x: hidden;
+} */
+/*BASICS END*/
+
+/*TIMELINE START*/
+.tl {
+  /*Basic*/
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  height: 910px;
+}
+
+.tl::after {
+  content: "";
+  /*Basic*/
+  width: 6px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+  /*Background*/
+  background: var(--c4);
+}
+
+.tl-container {
+  /*Basic*/
+  width: 50%;
+  padding: 1rem 5rem;
+  position: relative;
+  /*Background*/
+  background: inherit; /*same color as the background*/
+}
+
+.tl-container.one {
+  top: 0px;
+}
+.tl-container.two {
+  top: -50px;
+}
+.tl-container.three {
+  top: -100px;
+}
+.tl-container.four {
+  top: -150px;
+}
+
+.tl-left {
+  /*Basic*/
+  left: 0;
+}
+
+.tl-right {
+  /*Basic*/
+  left: 50%;
+}
+
+.tl-right::after {
+  /*Basic*/
+  left: -1rem;
+}
+
+.tl-content {
+  /*Basic*/
+  position: relative;
+  /*Outline, box-shadow, and border*/
+  
+  /*border: var(--bdr);*/
+  /*Background*/
+  background-color: var(--c3);
+  /*border-radius: 6px;*/
+  transition: all 1s;
+}
+
+.tl-left .tl-content {
+  box-shadow: var(--bsh-left);
+}
+.tl-right .tl-content {
+  box-shadow: var(--bsh-right);
+}
+
+.tl-left .tl-content:hover {
+  box-shadow: var(--bsh-left-hover);
+}
+.tl-right .tl-content:hover {
+  box-shadow: var(--bsh-right-hover);
+}
+
+.tl-left .tl-content {
+  text-align: right;
+  padding: 1.4rem 25px 1.4rem 0px;
+}
+.tl-right .tl-content {
+  text-align: left;
+  padding: 1.4rem 0px 1.4rem 25px;
+}
+
+.tl-content h4 {
+  margin-bottom: 7px;
+}
+
+.tl-content p {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.tl-content .skill-tags{
+  padding: 0px 12px;
+}
+  
+.tl-content .skill-tags .tag {
+    font-size: small;
+    
+    color: #fff;
+    background: #a79ecb;
+    display: inline-block;
+    position: relative;
+    height: 25px;
+}
+
+.tl-left .tl-content .skill-tags .tag {
+  margin: 10px 0px 0px 25px;
+  padding: 3px 4px 3px 10px;
+}
+.tl-right .tl-content .skill-tags .tag {
+  margin: 10px 25px 0px 0px;
+  padding: 3px 10px 3px 4px;
+}
+
+.tl-content .skill-tags .tag::before {
+  content: "";
+  display: inline-block;
+  border: 12.5px solid #695aa696;
+  height: 25px;
+  position: absolute;
+  top: 0px;
+}
+
+.tl-left .tl-content .skill-tags .tag::before {
+  right: -12px;
+  border-right-color: transparent;
+  border-left-width: 0px;
+}
+.tl-right .tl-content .skill-tags .tag::before {
+  left: -12px;
+  border-left-color: transparent;
+  border-right-width: 0px;
+}
+
+.tl-content .skill-tags .tag::after {
+  content: "";
+  display: inline-block;
+  border: 12.5px solid #a79ecb;
+  height: 25px;
+  position: absolute;
+  top: 0px;
+  border-bottom-color: transparent;
+  color: #695aa696;
+  border-top-color: transparent;
+}
+
+.tl-left .tl-content .skill-tags .tag::after {
+  border-right-width: 0;
+  right: -12px;
+}
+.tl-right .tl-content .skill-tags .tag::after {
+  border-left-width: 0;
+  left: -12px;
+}
+
+  
+/* .tl-container::after {
+    content: "";
+    display: inline-block;
+    border: 10px solid #695aa6;
+    border-radius: 10px;
+    position: absolute;
+    top: calc(50% - 10px);
+    box-shadow: 0px 0px 6px 3px #695aa6;
+} */
+
+.tl-container.tl-left::after {
+  right: 30px;
+}
+
+.tl-container.tl-right::after {
+  left: 30px;
+}
+
+  
+
+  
+
+
+@media screen and (max-width: 600px) {
+  .tl::after {
+    left: 31px;
+  }
+
+  .tl-container {
+    /*Basic*/
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 1rem;
+  }
+
+  .tl-left::after,
+  .tl-right::after {
+    /*Basic*/
+    left: 1rem;
+  }
+
+  .tl-right {
+    /*Basic*/
+    left: 0%;
+  }
+}
+/*TIMELINE END*/
+  

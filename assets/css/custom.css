@@ -1,0 +1,92 @@
+img.logo {
+    width: 45px;
+    height: 45px;
+}
+div.scroll-down {
+    left: 50%;transform: translateY(0%) rotate(45deg);opacity: 0;width: 2em; height: 2em; background-color: transparent; z-index: 80;position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: #61669a; cursor: pointer;
+}
+div.scroll-down.first {
+    bottom: 55px; animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+}
+div.scroll-down.second {
+    bottom: 70px; animation: scrolldown 1.2s ease-in-out infinite;
+}
+@keyframes scrolldown {
+    0% {
+        transform: translateY(20%) rotate(45deg);opacity: 0.7;
+    }
+    50% {
+        transform: translateY(0%) rotate(45deg);opacity: 0.2;
+    }
+    100% {
+        transform: translateY(20%) rotate(45deg);opacity: 0.7;
+    }
+}
+#downloadCV {
+    cursor: pointer;
+    color: #61669a;
+}
+#downloadCV i {
+    padding-right: 7px;
+}
+#downloadCV:hover {
+    color: #fff;
+}
+#downloadCV:focus {
+    box-shadow: none;
+}
+
+.col-md-6 { padding: 20px 0 0 0; }
+.col-md-6 .contact-card { border: 1px solid #fff;padding: 10px 30px;display: flex;align-items: center;width: 300px;margin: 0 auto; }
+.col-md-6 .contact-card.linkedin .service { margin-top: 5px; }
+.col-md-6 .contact-card .service-img { height: 30px; }
+.col-md-6 .contact-card .service { margin-left: 20px; }
+.col-md-6 .contact-card .service-img i:before { color: #695aa6;font-size: 30px; }
+.col-md-7 { margin: 0px auto 20px auto }
+
+
+.tl-content::after {
+    content:"";
+    display: block;
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 20px;
+    border-radius: 100%;
+    background: rgba(255,255,255,0.7);
+    box-shadow: inset 0px 0px 10px 2px #695aa680, 0px 0px 10px 2px #695aa64d;
+    -webkit-animation: pulse 1s alternate infinite;
+    -moz-animation: pulse 1s alternate infinite;
+    position: absolute;
+}
+
+.tl-left .tl-content::after {
+    right: -67px;
+    top: 48%;
+}
+.tl-right .tl-content::after {
+    left: -50px;
+    top: 48%;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        background: rgba(255,255,255,0.3);
+        box-shadow: inset 0px 0px 10px 2px #695aa680, 0px 0px 5px 2px #695aa64d
+    }
+    100% {
+        background: rgba(255,255,255,1);
+        box-shadow: inset 0px 0px 10px 2px #695aa680, 0px 0px 15px 2px #695aa6
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        background: rgba(255,255,255,0.3);
+        box-shadow: inset 0px 0px 10px 2px #695aa680, 0px 0px 5px 2px #695aa64d
+    }
+    100% {
+        background: rgba(255,255,255,1);
+        box-shadow: inset 0px 0px 10px 2px #695aa680, 0px 0px 15px 2px #695aa6
+    }
+}

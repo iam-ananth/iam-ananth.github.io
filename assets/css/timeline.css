@@ -48,7 +48,6 @@
   max-width: 1200px;
   margin: auto;
   position: relative;
-  height: 910px;
 }
 
 .tl::after {
@@ -73,7 +72,7 @@
   background: inherit; /*same color as the background*/
 }
 
-.tl-container.one {
+/* .tl-container.one {
   top: 0px;
 }
 .tl-container.two {
@@ -84,7 +83,7 @@
 }
 .tl-container.four {
   top: -150px;
-}
+} */
 
 .tl-left {
   /*Basic*/
